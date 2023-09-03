@@ -1,16 +1,14 @@
 package com.BookMyShow.Repository;
 
-import com.BookMyShow.Models.User;
+import com.BookMyShow.Models.ShowSeat;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
-
 @Repository
-public interface UserRepository extends JpaRepository<User,Long> {
+public interface ShowSeatRepository extends JpaRepository<ShowSeat,Long> {
     @Override
-    Optional<User>findById(Long Id);
-    Optional<User>finfByEmail(String Email);
+    Optional<ShowSeat>findById(Long along);
     @Override
-    User save(User user);
+    ShowSeat save(ShowSeat showSeat);
 }
